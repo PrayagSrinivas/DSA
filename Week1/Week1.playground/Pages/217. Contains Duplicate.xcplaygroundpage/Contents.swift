@@ -14,9 +14,22 @@ import Foundation
 
 class Solution {
     func containsDuplicate(_ nums: [Int]) -> Bool {
-        // Write your solution here
+        var hashmap = [Int : Int]()
+        for i in nums {
+            hashmap[i, default: 0] += 1
+        }
+        
+        for (key, value) in hashmap {
+            if value > 1 {
+                return true
+            }
+        }
         return false
     }
+
+//    func containsDuplicate(_ nums: [Int]) -> Bool {
+//        return Set(nums).count != nums.count
+//    }
 }
 
 // MARK: - Test Cases
