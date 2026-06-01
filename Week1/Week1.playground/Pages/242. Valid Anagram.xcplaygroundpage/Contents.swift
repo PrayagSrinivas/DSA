@@ -25,9 +25,9 @@ class Solution {
 let solution = Solution()
 
 assert(solution.isAnagram("anagram", "nagaram") == true,  "Test 1 Failed")
-assert(solution.isAnagram("rat", "car")          == false, "Test 2 Failed")
-assert(solution.isAnagram("a", "a")              == true,  "Test 3 Failed")
-assert(solution.isAnagram("ab", "a")             == false, "Test 4 Failed")
+assert(solution.isAnagram("rat", "car") == false, "Test 2 Failed")
+assert(solution.isAnagram("a", "a") == true,  "Test 3 Failed")
+assert(solution.isAnagram("ab", "a") == false, "Test 4 Failed")
 
 print("All test cases passed! ✅")
 
