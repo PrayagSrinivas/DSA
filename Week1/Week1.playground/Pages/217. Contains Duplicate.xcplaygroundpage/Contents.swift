@@ -29,4 +29,4 @@ assert(solution.containsDuplicate([1,1,1,3,3,4,3,2,4,2]) == true, "Test 3 Failed
 
 print("All test cases passed! ✅")
 
-//: [Next →](@next)
+//: [Next → 242. Valid Anagram](@next)

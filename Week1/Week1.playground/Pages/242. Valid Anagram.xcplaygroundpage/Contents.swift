@@ -1,4 +1,4 @@
-//: [← Previous](@previous)
+//: [← Previous: 217. Contains Duplicate](@previous)
 //:
 //: # 242. Valid Anagram
 //: [LeetCode](https://leetcode.com/problems/valid-anagram/)
@@ -30,3 +30,5 @@ assert(solution.isAnagram("a", "a")              == true,  "Test 3 Failed")
 assert(solution.isAnagram("ab", "a")             == false, "Test 4 Failed")
 
 print("All test cases passed! ✅")
+
+//: [Next →](@next)
