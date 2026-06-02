@@ -25,8 +25,22 @@ import Foundation
 
 class Solution {
     func isAnagram(_ s: String, _ t: String) -> Bool {
-        // Write your solution here
-        return false
+        // Intuition: First create a hashMap with first string, then try to compare the hashmap wiht second string value.
+        
+        // First check if both are having same number of character or not
+        guard s.count == t.count else { return false }
+        
+        var hashMap: [Character : Int] = [:]
+        
+        for char in s {
+            hashMap[char, default: 0] += 1
+        }
+        
+        for char in t {
+            guard let value = hashMap[char], value > 0 else { return false }
+            hashMap[char] = value - 1
+        }
+        return true
     }
 }
 
