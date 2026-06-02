@@ -50,6 +50,18 @@ class Solution {
         
         return []
     }
+    
+//    // Brute Force Approach - O(n²)
+//    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+//        for i in 0..<nums.count {
+//            for j in (i+1)..<nums.count {
+//                if nums[i] + nums[j] == target {
+//                    return [i, j]
+//                }
+//            }
+//        }
+//        return []
+//    }
 }
 
 // MARK: - Test Cases
@@ -63,3 +75,5 @@ assert(solution.twoSum([2,5,5,11], 10) == [1,2], "Test 4 Failed")
 assert(solution.twoSum([-1,-2,-3,-4,-5], -8) == [2,4], "Test 5 Failed")
 
 print("All test cases passed! ✅")
+
+//: [Next → 49. Group Anagrams](@next)

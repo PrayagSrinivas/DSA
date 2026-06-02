@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='rendered'>
+<playground version='6.0' target-platform='ios'>
     <pages>
         <page name='217. Contains Duplicate'/>
         <page name='121. Best Time to Buy and Sell Stock'/>
         <page name='242. Valid Anagram'/>
+        <page name='1. Two Sum'/>
+        <page name='49. Group Anagrams'/>
     </pages>
 </playground>
