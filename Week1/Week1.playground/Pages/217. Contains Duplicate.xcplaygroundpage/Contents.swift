@@ -1,12 +1,26 @@
+//: # Week 1 - Array & Hashing
+//:
 //: # 217. Contains Duplicate
 //: [LeetCode](https://leetcode.com/problems/contains-duplicate/)
 //:
 //: Given an integer array `nums`, return `true` if any value appears **at least twice**,
 //: and `false` if every element is distinct.
 //:
-//: **Example 1:** Input: `[1,2,3,1]` → Output: `true`
-//: **Example 2:** Input: `[1,2,3,4]` → Output: `false`
-//: **Example 3:** Input: `[1,1,1,3,3,4,3,2,4,2]` → Output: `true`
+//: **Example 1:**
+//: - Input: `[1,2,3,1]`
+//: - Output: `true`
+//:
+//: **Example 2:**
+//: - Input: `[1,2,3,4]`
+//: - Output: `false`
+//:
+//: **Example 3:**
+//: - Input: `[1,1,1,3,3,4,3,2,4,2]`
+//: - Output: `true`
+//:
+//: **Constraints:**
+//: - `1 <= nums.length <= 10^5`
+//: - `-10^9 <= nums[i] <= 10^9`
 
 import Foundation
 
@@ -42,4 +56,4 @@ assert(solution.containsDuplicate([1,1,1,3,3,4,3,2,4,2]) == true, "Test 3 Failed
 
 print("All test cases passed! ✅")
 
-//: [Next → 242. Valid Anagram](@next)
+//: [Next → 121. Best Time to Buy and Sell Stock](@next)
