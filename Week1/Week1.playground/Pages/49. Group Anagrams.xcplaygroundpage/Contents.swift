@@ -38,7 +38,22 @@ import Foundation
 class Solution {
     func groupAnagrams(_ strs: [String]) -> [[String]] {
         // Write your solution here
-        return []
+        var hash: [String: [String]] = [:]
+        var result: [[String]] = []
+        
+        for item in strs {
+            let sorted = item.sorted().map(String.init).joined()
+            if let value = hash[sorted], !value.isEmpty {
+                hash[sorted]?.append(item)
+            } else {
+                hash[sorted] = [item]
+            }
+        }
+        
+        for (_, value) in hash {
+            result.append(value)
+        }
+        return result
     }
 }
 
