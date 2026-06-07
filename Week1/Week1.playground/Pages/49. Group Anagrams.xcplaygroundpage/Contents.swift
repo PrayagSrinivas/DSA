@@ -92,3 +92,5 @@ let expected4 = [["max"],["buy"],["doc"],["may"],["ill"],["duh"],["tin"],["bar"]
 assert(areGroupsEqual(test4, expected4), "Test 4 Failed")
 
 print("All test cases passed! ✅")
+
+//: [← Previous: 1. Two Sum](@previous) | [Next: 347. Top K Frequent Elements →](@next)
