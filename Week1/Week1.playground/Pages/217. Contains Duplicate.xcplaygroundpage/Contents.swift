@@ -50,10 +50,29 @@ class Solution {
 
 let solution = Solution()
 
-assert(solution.containsDuplicate([1, 2, 3, 1]) == true,  "Test 1 Failed")
-assert(solution.containsDuplicate([1, 2, 3, 4]) == false, "Test 2 Failed")
-assert(solution.containsDuplicate([1,1,1,3,3,4,3,2,4,2]) == true, "Test 3 Failed")
+var passed = 0
+var failed = [String]()
 
-print("All test cases passed! ✅")
+func check(_ result: Bool, _ expected: Bool, _ label: String) {
+    if result == expected { passed += 1 }
+    else { failed.append(label) }
+}
+
+check(solution.containsDuplicate([1, 2, 3, 1]),                true,  "TC01 - Basic duplicate")
+check(solution.containsDuplicate([1, 2, 3, 4]),                false, "TC02 - All unique")
+check(solution.containsDuplicate([1,1,1,3,3,4,3,2,4,2]),       true,  "TC03 - Multiple duplicates")
+check(solution.containsDuplicate([]),                           false, "TC04 - Empty array")
+check(solution.containsDuplicate([1]),                          false, "TC05 - Single element")
+check(solution.containsDuplicate([1, 1]),                       true,  "TC06 - Two same elements")
+check(solution.containsDuplicate([-1, -1]),                     true,  "TC07 - Negative duplicates")
+check(solution.containsDuplicate([Int.min, Int.max]),           false, "TC08 - Extreme values no dup")
+check(solution.containsDuplicate([Int.min, Int.min]),           true,  "TC09 - Extreme value duplicate")
+check(solution.containsDuplicate(Array(1...1000)),              false, "TC10 - Large all-unique array")
+
+if failed.isEmpty {
+    print("All \(passed) test cases passed! ✅")
+} else {
+    print("⚠️ \(failed.count) test(s) failed: \(failed.joined(separator: ", "))")
+}
 
 //: [Next → 121. Best Time to Buy and Sell Stock](@next)
