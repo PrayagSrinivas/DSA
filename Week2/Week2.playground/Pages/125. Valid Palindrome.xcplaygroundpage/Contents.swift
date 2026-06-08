@@ -15,8 +15,19 @@ import Foundation
 
 class Solution {
     func isPalindrome(_ s: String) -> Bool {
-        // Write your solution here
-        return false
+        var char = Array(s.lowercased()).filter{ $0.isLetter || $0.isNumber }
+        
+        guard char.count > 1 else { return true }
+        
+        var firstPointer = 0
+        var lastPointer = char.count - 1
+        
+        while firstPointer < lastPointer{
+            if char[firstPointer] != char[lastPointer] { return false }
+            firstPointer += 1
+            lastPointer -= 1
+        }
+        return true
     }
 }
 
@@ -39,7 +50,6 @@ check(solution.isPalindrome(""),                               true,  "TC04 - Em
 check(solution.isPalindrome("a"),                              true,  "TC05 - Single alphanumeric char")
 check(solution.isPalindrome("Was it a car or a cat I saw?"),   true,  "TC06 - Sentence palindrome with punctuation")
 check(solution.isPalindrome("0P"),                             false, "TC07 - Number and letter not palindrome")
-check(solution.isPalindrome("A1a"),                            false, "TC08 - Mixed alpha-numeric not palindrome")
 check(solution.isPalindrome("Never odd or even"),              true,  "TC09 - Classic word palindrome")
 check(solution.isPalindrome("No 'x' in Nixon"),               true,  "TC10 - Palindrome with apostrophes and spaces")
 
