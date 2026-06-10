@@ -19,7 +19,20 @@ import Foundation
 class Solution {
     func twoSum(_ numbers: [Int], _ target: Int) -> [Int] {
         // Write your solution here
-        return []
+        var firstPointer = 0
+        var lastPointer = numbers.count - 1
+        
+        while firstPointer < lastPointer {
+            let currentSum = numbers[firstPointer] + numbers[lastPointer]
+            if currentSum == target {
+                return [firstPointer + 1, lastPointer + 1]
+            } else if currentSum < target {
+                firstPointer += 1
+            } else {
+                lastPointer -= 1
+            }
+        }
+        return [-1, -1]
     }
 }
 
