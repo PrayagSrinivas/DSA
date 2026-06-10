@@ -59,4 +59,4 @@ if failed.isEmpty {
     print("⚠️ \(failed.count) test(s) failed: \(failed.joined(separator: ", "))")
 }
 
-//: [Next →](@next)
+//: [Next → 167. Two Sum II](@next)
