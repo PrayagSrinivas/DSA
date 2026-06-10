@@ -3,5 +3,6 @@
     <pages>
         <page name='125. Valid Palindrome'/>
         <page name='167. Two Sum II - Input Array Is Sorted'/>
+        <page name='128. Longest Consecutive Sequence'/>
     </pages>
 </playground>

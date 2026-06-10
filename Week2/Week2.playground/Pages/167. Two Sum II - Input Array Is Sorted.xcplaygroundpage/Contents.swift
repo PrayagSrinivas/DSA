@@ -52,4 +52,4 @@ if failed.isEmpty {
     print("⚠️ \(failed.count) test(s) failed: \(failed.joined(separator: ", "))")
 }
 
-//: [Next →](@next)
+//: [Next → 128. Longest Consecutive Sequence](@next)
