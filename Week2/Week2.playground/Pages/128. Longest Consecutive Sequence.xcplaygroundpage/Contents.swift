@@ -16,8 +16,25 @@ import Foundation
 
 class Solution {
     func longestConsecutive(_ nums: [Int]) -> Int {
-        // Write your solution here
-        return 0
+        // Making sure we are dealing with unique number.
+        var numSet = Set(nums)
+        var maxStreak = 0
+        
+        for num in nums {
+            
+            // Making sure that if this is the line leader
+            if !numSet.contains(num-1) {
+                var currentNum = num
+                var currentStreak = 1
+                
+                while numSet.contains(currentNum + 1) {
+                    currentNum += currentNum
+                    currentStreak += 1
+                }
+                maxStreak = max(currentStreak, maxStreak)
+            }
+        }
+        return maxStreak
     }
 }
 
