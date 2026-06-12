@@ -67,4 +67,4 @@ if failed.isEmpty {
     print("⚠️ \(failed.count) test(s) failed: \(failed.joined(separator: ", "))")
 }
 
-//: [Next →](@next)
+//: [Next → 15. 3Sum](@next)
