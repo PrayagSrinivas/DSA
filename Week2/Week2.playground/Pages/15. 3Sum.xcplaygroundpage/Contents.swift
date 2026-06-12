@@ -17,8 +17,38 @@ import Foundation
 
 class Solution {
     func threeSum(_ nums: [Int]) -> [[Int]] {
-        // Write your solution here
-        return []
+        var sortedData = nums.sorted()
+        var result = [[Int]]()
+        
+        guard sortedData.count >= 3 else { return []}
+        
+        for i in 0..<sortedData.count - 2 {
+            if i > 0 && sortedData[i] == sortedData[i - 1]  { continue }
+
+            var j = i + 1
+            var k = sortedData.count - 1
+            
+            while(j < k) {
+                let sum = sortedData[i] + sortedData[j] + sortedData[k]
+                if sum == 0 {
+                    result.append([sortedData[i], sortedData[j], sortedData[k]])
+                    j += 1
+                    k -= 1
+                    while(j < k && sortedData[j] == sortedData[j - 1]) {
+                        j += 1
+                    }
+                    while(j < k && sortedData[k] == sortedData[k + 1]) {
+                        k -= 1
+                    }
+                } else if sum < 0 {
+                    j += 1
+                } else {
+                    k -= 1
+                }
+            }
+            
+        }
+        return result
     }
 }
 
