@@ -1,10 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='rendered'>
-    <pages>
-        <page name='125. Valid Palindrome'/>
-        <page name='167. Two Sum II - Input Array Is Sorted'/>
-        <page name='128. Longest Consecutive Sequence'/>
-        <page name='42. Trapping Rain Water'/>
-        <page name='15. 3Sum'/>
-    </pages>
-</playground>
+<playground version='6.0' target-platform='ios' display-mode='rendered'/>

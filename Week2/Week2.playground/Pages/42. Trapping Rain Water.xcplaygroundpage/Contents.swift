@@ -15,8 +15,33 @@ import Foundation
 
 class Solution {
     func trap(_ height: [Int]) -> Int {
-        // Write your solution here
-        return 0
+        guard height.count >= 3 else { return 0 }
+
+        var leftPointer = 0
+        var rightPointer = height.count - 1
+        var trappedWater = 0
+        
+        var leftMax = height[leftPointer]
+        var rightMax = height[rightPointer]
+        
+        while leftPointer < rightPointer {
+            if height[leftPointer] < height[rightPointer] {
+                if leftMax <= height[leftPointer] {
+                    leftMax = height[leftPointer]
+                } else {
+                    trappedWater += (leftMax - height[leftPointer])
+                }
+                leftPointer += 1
+            } else {
+                if rightMax <= height[rightPointer] {
+                    rightMax = height[rightPointer]
+                } else {
+                    trappedWater += (rightMax - height[rightPointer])
+                }
+                rightPointer -= 1
+            }
+        }
+        return trappedWater
     }
 }
 
