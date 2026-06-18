@@ -7,6 +7,8 @@
 //:
 //: **Example 1:** Input: `[1,2,3,4]` → Output: `[24,12,8,6]`
 //: **Example 2:** Input: `[-1,1,0,-3,3]` → Output: `[0,0,9,0,0]`
+//:
+//: [Next: 53. Maximum Subarray →](@next)
 
 import Foundation
 
@@ -16,7 +18,7 @@ class Solution {
     // Brute Force
 //    func productExceptSelf(_ nums: [Int]) -> [Int] {
 //        var result = Array(repeating: 1, count: nums.count)
-//        
+//
 //        for i in 0..<nums.count {
 //            for j in 0..<nums.count {
 //                if i != j {

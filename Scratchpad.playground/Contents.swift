@@ -2,6 +2,10 @@
 // DSA PROBLEM TEMPLATE — Copy this for every new problem
 // ============================================================
 //
+// ⚠️ IMPORTANT: Do NOT include solution answers or brute force approaches
+//    - Leave the solution function body empty with a comment placeholder
+//    - Focus on problem setup, test cases, and structure only
+//
 // REQUIRED FORMAT:
 //
 // 1. Navigation links:
