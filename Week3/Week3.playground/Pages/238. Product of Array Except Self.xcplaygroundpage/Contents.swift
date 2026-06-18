@@ -13,9 +13,39 @@ import Foundation
 // MARK: - Solution
 
 class Solution {
+    // Brute Force
+//    func productExceptSelf(_ nums: [Int]) -> [Int] {
+//        var result = Array(repeating: 1, count: nums.count)
+//        
+//        for i in 0..<nums.count {
+//            for j in 0..<nums.count {
+//                if i != j {
+//                    result[i] *= nums[j]
+//                }
+//            }
+//        }
+//        return result
+//    }
+    
+    // Optimal approach.
     func productExceptSelf(_ nums: [Int]) -> [Int] {
-        // Write your solution here
-        return []
+        var prefixArray = Array(repeating: 1, count: nums.count)
+        var suffixArray = Array(repeating: 1, count: nums.count)
+        var result = [Int]()
+        
+        for i in 1..<nums.count {
+            prefixArray[i] = prefixArray[i - 1] * nums[i - 1]
+        }
+        
+        for i in stride(from: nums.count - 2, through: 0, by: -1) {
+            suffixArray[i] = suffixArray[i + 1] * nums[i + 1]
+        }
+        
+        for i in 0..<nums.count {
+            result.append(prefixArray[i] * suffixArray[i])
+        }
+        
+        return result
     }
 }
 
